@@ -1,12 +1,15 @@
-import React from "react";
+import React, {useId} from "react";
 import Image from "next/image";
 import FraudeCaracteristica from "./FraudeCaracteristica";
 import FraudeStyles from '../styles/fraude.module.css'
 
+
 const Fraude = ({fraude}) => {
+    const idFraude = useId();
+    
     return (
         <>
-            <div className={FraudeStyles.fraudeCard}>
+            <div className={FraudeStyles.fraudeCard} key={useId()}>
                 <div className={FraudeStyles.fraudeCard_Title}>
                     <h2>{fraude.titulo}</h2>
                 </div>
