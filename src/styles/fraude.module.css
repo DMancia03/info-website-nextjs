@@ -41,6 +41,7 @@
     padding: 1em;
     background-color: var(--blue-01);
     color: var(--yellow-01);
+    text-align: center;
 }
 
 /*
@@ -80,13 +81,14 @@
 }
 
 /*
-    INFO GENERAL
+    GENERAL
 */
 .fraudeCard_Info{
     grid-row: 1;
     display: grid;
     grid-template-rows: 0.5fr 0.5fr 1fr;
     padding: 2em;
+    text-align: justify;
 }
 
 .fraudeCard_Title{
@@ -107,4 +109,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media only screen and (max-width: 768px){
+    .fraudeCard:nth-child(even), .fraudeCard:nth-child(odd){
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+    }
+
+    .fraudeCard:nth-child(even) .fraudeCard_Image, .fraudeCard:nth-child(odd) .fraudeCard_Image{
+        grid-row: 1;
+        grid-column: 1;
+        padding: 1em;
+    }
+
+    .fraudeCard:nth-child(even) .fraudeCard_Info, .fraudeCard:nth-child(odd) .fraudeCard_Info{
+        grid-row: 2;
+        grid-column: 1;
+        display: grid;
+        grid-template-rows: 0.25fr 0.5fr 1fr;
+        gap: 2em;
+    }
 }
