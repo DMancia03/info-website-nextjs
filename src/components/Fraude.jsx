@@ -6,20 +6,22 @@ import FraudeStyles from '../styles/fraude.module.css'
 
 const Fraude = ({fraude}) => {
     const idFraude = useId();
-    
+
     return (
         <>
-            <div className={FraudeStyles.fraudeCard} key={useId()}>
-                <div className={FraudeStyles.fraudeCard_Title}>
-                    <h2>{fraude.titulo}</h2>
-                </div>
-                <div className={FraudeStyles.fraudeCard_Description}>
-                    <h4>Descripción:</h4>
-                    <p>{fraude.descripcion}</p>
-                </div>
-                <div className={FraudeStyles.fraudeCard_Feature}>
-                    <h4>Características:</h4>
-                    {Object.entries(fraude.caracteristicas).map((value, index) => (<FraudeCaracteristica c={value}/>))}
+            <div className={FraudeStyles.fraudeCard} key={idFraude}>
+                <div className={FraudeStyles.fraudeCard_Info}>
+                    <div className={FraudeStyles.fraudeCard_Title}>
+                        <h2>{fraude.titulo}</h2>
+                    </div>
+                    <div className={FraudeStyles.fraudeCard_Description}>
+                        <h4>Descripción:</h4>
+                        <p>{fraude.descripcion}</p>
+                    </div>
+                    <div className={FraudeStyles.fraudeCard_Feature}>
+                        <h4>Características:</h4>
+                        {Object.entries(fraude.caracteristicas).map((value, index) => (<FraudeCaracteristica c={value}/>))}
+                    </div>
                 </div>
                 <div className={FraudeStyles.fraudeCard_Image}>
                     <Image 

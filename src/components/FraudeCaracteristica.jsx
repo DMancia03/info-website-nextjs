@@ -5,7 +5,7 @@ const FraudeCaracteristica = ({idFather, c}) => {
     return (
         <>
             <div key={idFeature}>
-                <p>{c[1]}</p>
+                <p>- {c[1]}</p>
             </div>
         </>
     )
