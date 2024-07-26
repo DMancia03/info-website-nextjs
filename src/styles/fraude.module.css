@@ -45,7 +45,7 @@
 }
 
 /*
-    PAR
+    PAR ESCRITORIO Y TABLET
 */
 .fraudeCard:nth-child(even){
     display: grid;
@@ -63,7 +63,7 @@
 }
 
 /*
-    IMPAR
+    IMPAR ESCRITORIO Y TABLET
 */
 .fraudeCard:nth-child(odd){
     display: grid;
@@ -81,7 +81,7 @@
 }
 
 /*
-    GENERAL
+    GENERAL ESCRITORIO Y TABLET
 */
 .fraudeCard_Info{
     grid-row: 1;
@@ -111,7 +111,13 @@
     justify-content: center;
 }
 
+/*
+    CELULARES
+*/
 @media only screen and (max-width: 768px){
+    /*
+        GENERAL (IMPAR Y PAR)
+    */
     .fraudeCard:nth-child(even), .fraudeCard:nth-child(odd){
         display: grid;
         grid-template-columns: 1fr;
