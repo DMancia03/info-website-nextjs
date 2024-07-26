@@ -20,7 +20,9 @@ const Fraude = ({fraude}) => {
                     </div>
                     <div className={FraudeStyles.fraudeCard_Feature}>
                         <h4>Características:</h4>
-                        {Object.entries(fraude.caracteristicas).map((value, index) => (<FraudeCaracteristica c={value}/>))}
+                        <div>
+                            {Object.entries(fraude.caracteristicas).map((value, index) => (<FraudeCaracteristica c={value} key={idFraude + value[0]}/>))}
+                        </div>
                     </div>
                 </div>
                 <div className={FraudeStyles.fraudeCard_Image}>
