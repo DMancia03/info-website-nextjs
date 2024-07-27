@@ -1,31 +1,31 @@
 import React, {useId} from "react";
 import Image from "next/image";
-import FraudeCaracteristica from "./FraudeCaracteristica";
-import FraudeStyles from '../styles/fraude.module.css'
+import ElementoCaracteristica from "./ElementoCaracteristica";
+import CustomStyles from '../styles/elemento.module.css'
 
 
-const Fraude = ({fraude}) => {
+const Elemento = ({fraude}) => {
     const idFraude = useId();
 
     return (
         <>
-            <div className={FraudeStyles.fraudeCard} key={idFraude}>
-                <div className={FraudeStyles.fraudeCard_Info}>
-                    <div className={FraudeStyles.fraudeCard_Title}>
+            <div className={CustomStyles.fraudeCard} key={idFraude}>
+                <div className={CustomStyles.fraudeCard_Info}>
+                    <div className={CustomStyles.fraudeCard_Title}>
                         <h2>{fraude.titulo}</h2>
                     </div>
-                    <div className={FraudeStyles.fraudeCard_Description}>
+                    <div className={CustomStyles.fraudeCard_Description}>
                         <h4>Descripción:</h4>
                         <p>{fraude.descripcion}</p>
                     </div>
-                    <div className={FraudeStyles.fraudeCard_Feature}>
+                    <div className={CustomStyles.fraudeCard_Feature}>
                         <h4>Características:</h4>
                         <div>
-                            {Object.entries(fraude.caracteristicas).map((value, index) => (<FraudeCaracteristica c={value} key={idFraude + value[0]}/>))}
+                            {Object.entries(fraude.caracteristicas).map((value, index) => (<ElementoCaracteristica c={value} key={idFraude + value[0]}/>))}
                         </div>
                     </div>
                 </div>
-                <div className={FraudeStyles.fraudeCard_Image}>
+                <div className={CustomStyles.fraudeCard_Image}>
                     <Image 
                         src={fraude.imagen_de_referencia}
                         width={200}
@@ -38,4 +38,4 @@ const Fraude = ({fraude}) => {
     )
 }
 
-export default Fraude
+export default Elemento

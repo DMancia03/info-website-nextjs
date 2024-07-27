@@ -1,6 +1,6 @@
 import React, {useId} from "react";
 
-const FraudeCaracteristica = ({c}) => {
+const ElementoCaracteristica = ({c}) => {
     const idFeature = useId();
 
     return (
@@ -8,4 +8,4 @@ const FraudeCaracteristica = ({c}) => {
     )
 }
 
-export default FraudeCaracteristica
+export default ElementoCaracteristica
