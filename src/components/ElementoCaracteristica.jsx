@@ -4,7 +4,11 @@ const ElementoCaracteristica = ({c}) => {
     const idFeature = useId();
 
     return (
-        <p key={idFeature}>- {c[1]}</p>
+        <>
+            <p>- {c.Fecha}</p>
+            <p>- {c.Impacto}</p>
+            <p>- {c.Modus_operandi}</p>
+        </>
     )
 }
 

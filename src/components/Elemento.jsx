@@ -21,7 +21,7 @@ const Elemento = ({fraude}) => {
                     <div className={CustomStyles.fraudeCard_Feature}>
                         <h4>Características:</h4>
                         <div>
-                            {Object.entries(fraude.caracteristicas).map((value, index) => (<ElementoCaracteristica c={value} key={idFraude + value[0]}/>))}
+                            {fraude.caracteristicas.map((value, index) => (<ElementoCaracteristica c={value} key={useId()}/>))}
                         </div>
                     </div>
                 </div>
